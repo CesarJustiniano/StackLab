@@ -12,6 +12,11 @@ public class SymmetricStringAnalyzer {
 	 */
 	public boolean isValidContent() { 
 		SLLStack<Character> stack = new SLLStack<Character>(); 
+		
+		if(s.length()%2 != 0 || s.isEmpty()){
+			return false;
+		}
+		
 	    for (int i=0; i < s.length(); i++) { 
 	    	char c = s.charAt(i); 
 	        if (Character.isLetter(c))
@@ -29,6 +34,7 @@ public class SymmetricStringAnalyzer {
 	        else 
 	        	return false; 
 	    } 
+	    
 	    return true; 
 	}
 	
